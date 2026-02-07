@@ -5,7 +5,10 @@
 The **Interactive Verlet Gravity Simulation** is a real-time physics-based web application that demonstrates particle motion using the **Verlet Integration algorithm**. The simulation models realistic gravity, collision detection, stacking behavior, and energy damping to create a stable and visually engaging particle system.
 
 This project highlights strong problem-solving skills, mathematical modeling, and an understanding of physics-based animation in modern web development.
+---
 
+## Live Demo
+https://Buildup-Prisha.github.io/react-verlet-integration/
 
 ---
 

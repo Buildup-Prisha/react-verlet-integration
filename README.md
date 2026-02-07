@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Interactive Verlet Gravity Simulation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##  Project Overview
 
-## Available Scripts
+The **Interactive Verlet Gravity Simulation** is a real-time physics-based web application that demonstrates particle motion using the **Verlet Integration algorithm**. The simulation models realistic gravity, collision detection, stacking behavior, and energy damping to create a stable and visually engaging particle system.
 
-In the project directory, you can run:
+This project highlights strong problem-solving skills, mathematical modeling, and an understanding of physics-based animation in modern web development.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+##  Key Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Real-time particle physics simulation
+* Verlet integration for stable motion
+* Ball-to-ball collision detection
+* Natural stacking and pressure behavior
+* Gravity control using an interactive slider
+* Velocity damping to prevent energy explosion
+* Boundary constraints (floor and walls)
+* Click anywhere to spawn new particles
+* Smooth rendering using HTML5 Canvas
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##  Technical Concept
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project implements a **constraint-based physics solver**, a technique commonly used in modern physics engines and game development.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Instead of storing velocity directly, Verlet integration calculates motion using the difference between current and previous positions. This approach improves numerical stability and produces more natural movement.
 
-### `npm run eject`
+Multiple solver iterations are applied per frame to resolve particle overlaps, allowing realistic stacking and collision response.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##  Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* **React.js** – Component-based UI
+* **JavaScript (ES6)** – Core logic
+* **HTML5 Canvas** – Rendering and animation
+* **CSS** – Layout and styling
+* **Physics Algorithms** – Verlet integration and constraint solving
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+##  Learning Outcomes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Through this project, I gained practical experience in:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Numerical simulation techniques
+* Physics-based animation
+* Collision detection algorithms
+* Constraint solving
+* Performance-aware rendering
+* Managing animation loops in React
+* Building interactive UI controls
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+##  How to Run Locally
+Clone the repository.
 
-### Analyzing the Bundle Size
+Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm install
+```
 
-### Making a Progressive Web App
+Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm start
+```
 
-### Advanced Configuration
+The application will run on:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+http://localhost:3000
+```
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+##  Future Improvements
 
-### `npm run build` fails to minify
+* Mouse drag interaction to throw particles
+* Obstacles and dynamic surfaces
+* Liquid-style particle behavior
+* Slow-motion mode
+* Mobile responsiveness
+* Adjustable particle size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+##  Author
+
+**Prisha Rai**
+

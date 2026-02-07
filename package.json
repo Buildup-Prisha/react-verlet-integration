@@ -2,7 +2,7 @@
   "name": "verlet-project",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://github.com/Buildup-Prisha/react-verlet-integration"
+  "homepage":"https://github.com/Buildup-Prisha/react-verlet-integration",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",

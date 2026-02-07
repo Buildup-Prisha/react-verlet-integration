@@ -4,7 +4,7 @@ class Particle {
   constructor(x, y) {
     this.pos = { x, y };
 
-    // small initial velocity
+    
     this.prev = {
       x: x - (Math.random() * 4 - 2),
       y: y - (Math.random() * 4 - 2),
@@ -22,11 +22,11 @@ class Particle {
     let vx = this.pos.x - this.prev.x;
     let vy = this.pos.y - this.prev.y;
 
-    // ⭐ air friction (prevents infinite motion)
+
     vx *= 0.999;
     vy *= 0.999;
 
-    // ⭐ velocity clamp (prevents rocket launch)
+
     const maxSpeed = 35;
     vx = Math.max(-maxSpeed, Math.min(maxSpeed, vx));
     vy = Math.max(-maxSpeed, Math.min(maxSpeed, vy));
@@ -69,7 +69,7 @@ function Simulation() {
     const radius = 7;
     const diameter = radius * 2;
 
-    // ⭐ Ideal particle count for collisions
+
     for (let i = 0; i < 40; i++) {
       particles.push(
         new Particle(
@@ -87,7 +87,7 @@ function Simulation() {
 
     canvas.addEventListener("click", handleClick);
 
-    // ⭐ BALL COLLISION SOLVER
+
     function solveCollisions() {
       for (let k = 0; k < 3; k++) {
         for (let i = 0; i < particles.length; i++) {
@@ -116,7 +116,6 @@ function Simulation() {
               p2.pos.x += nx * push;
               p2.pos.y += ny * push;
 
-              // damping removes jitter
               const damping = 0.98;
 
               p1.prev.x =
@@ -144,28 +143,27 @@ function Simulation() {
         p.update(dt);
       });
 
-      // Solve collisions
+
       solveCollisions();
 
-      // Boundaries + render
+
       particles.forEach((p) => {
         let vx = p.pos.x - p.prev.x;
         let vy = p.pos.y - p.prev.y;
 
-        // FLOOR
+
         if (p.pos.y > canvas.height - radius) {
           p.pos.y = canvas.height - radius;
 
           p.prev.y = p.pos.y - vy * -0.6;
           p.prev.x = p.pos.x - vx * 0.85;
 
-          // stop micro bouncing
           if (Math.abs(vy) < 0.1 && gravityRef.current < 0.05) {
             p.prev.y = p.pos.y;
           }
         }
 
-        // WALLS
+
         if (p.pos.x > canvas.width - radius) {
           p.pos.x = canvas.width - radius;
           p.prev.x = p.pos.x - vx * -0.7;
